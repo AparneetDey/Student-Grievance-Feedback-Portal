@@ -6,3 +6,9 @@ const displayModal = (modalId) => {
         modal.classList.add("active");
     }
 }
+
+const handleSubmit = (e) => {
+    e.preventDefault()
+    window.location.href = "./src/components/studentDashboard.html";
+    console.log(window.location.href);
+}
