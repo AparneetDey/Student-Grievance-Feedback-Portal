@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grievance Portal</title>
+    <link rel="stylesheet" href="./src/CSS/index.css">
+    <link rel="stylesheet" href="./src/CSS/landingPage.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Grievance Portal</h1>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button class="btn login-btn" onclick="displayModal('#login')">Login</button>
+                <button class="btn register-btn" onclick="displayModal('#register')">Register</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h2>Secure Student Grievance & Feedback System</h2>
+                <p>
+                    Submit grievances anonymously or with identity, track status,
+                    and communicate directly with administrators securely.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn primary-btn">Submit Grievance</button>
+                    <button class="btn secondary-btn">Track Status</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.svg" alt="Grievance Portal Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Anonymous Submission</h3>
+                    <p>Submit grievances without revealing identity.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Status Tracking</h3>
+                    <p>Track grievance progress in real time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Secure Authentication</h3>
+                    <p>JWT-based secure login system.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Admin Response System</h3>
+                    <p>Receive official responses from administrators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <span>1</span>
+                    <p>Register or Login</p>
+                </div>
+                <div class="step">
+                    <span>2</span>
+                    <p>Submit Grievance</p>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                    <p>Admin Reviews</p>
+                </div>
+                <div class="step">
+                    <span>4</span>
+                    <p>Track Resolution</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Start Using the Portal</h2>
+            <p>
+                Register now to submit and track grievances securely.
+            </p>
+            <button class="btn primary-btn" onclick="displayModal('#register')">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <h3>Grievance Portal</h3>
+                <p>Secure and transparent grievance management system.</p>
+            </div>
+            <div class="footer-right">
+                <p>© 2026 Grievance Portal</p>
+                <p>All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal login-modal" id="login">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <button class="btn close-btn" onclick="displayModal('#login')">X</button>
+            </div>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="btn primary-btn">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Register Modal -->
+    <div class="modal register-modal" id="register">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Register</h2>
+                <button class="btn close-btn" onclick="displayModal('#register')">X</button>
+            </div>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <label for="uid">UID:</label>
+                <input type="text" id="uid" placeholder="UID" required>
+                <label for="department">Department:</label>
+                <input type="text" id="department" placeholder="Department" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="btn primary-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./src/JS/index.js" />
+</body>
+
+</html>
