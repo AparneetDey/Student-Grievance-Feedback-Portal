@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Thread</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/feedback.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2 class="logo">Grievance Portal</h2>
+
+        <nav class="sidebar-nav">
+            <a href="studentDashboard.html">Dashboard</a>
+            <a href="submitGrievance.html">Submit Grievance</a>
+            <a href="grievanceStatus.html">Grievance Status</a>
+            <a href="feedback.html" class="active">Feedback</a>
+            <a href="profile.html">Profile</a>
+            <a href="#">Logout</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="top-header">
+            <h1>Feedback Thread</h1>
+        </header>
+
+
+        <!-- Grievance Info -->
+        <section class="grievance-info">
+
+            <h3>Grievance: Hostel Water Issue</h3>
+            <p>Status: <span class="status pending">Pending</span></p>
+
+        </section>
+
+
+        <!-- Thread Section -->
+        <section class="thread-section">
+
+            <!-- Admin message -->
+            <div class="message admin">
+
+                <div class="message-header">
+                    <strong>Admin</strong>
+                    <span>17 Feb 2026</span>
+                </div>
+
+                <div class="message-body">
+                    We have received your grievance. Investigation is in progress.
+                </div>
+
+            </div>
+
+
+            <!-- Student message -->
+            <div class="message student">
+
+                <div class="message-header">
+                    <strong>You</strong>
+                    <span>18 Feb 2026</span>
+                </div>
+
+                <div class="message-body">
+                    Thank you. Please resolve it soon as it is causing inconvenience.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reply Section -->
+        <section class="reply-section">
+
+            <form id="replyForm">
+
+                <textarea
+                    placeholder="Write your reply..."
+                    required></textarea>
+
+                <button type="submit" class="btn primary-btn">
+                    Send Reply
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+document.getElementById("replyForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Reply sent successfully");
+
+});
+
+</script>
+
+</body>
+</html>

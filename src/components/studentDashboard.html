@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/student-dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">Grievance Portal</h2>
+            <nav class="sidebar-nav">
+                <a href="studentDashboard.html" class="active">Dashboard</a>
+                <a href="submitGrievance.html">Submit Grievance</a>
+                <a href="grievanceStatus.html">Grievance Status</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="profile.html">Profile</a>
+                <a href="#">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <h1>Student Dashboard</h1>
+                <div class="user-info">
+                    <span>Welcome, Student</span>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <section class="stats">
+                <div class="card">
+                    <h3>Total Grievances</h3>
+                    <p>12</p>
+                </div>
+                <div class="card">
+                    <h3>Pending</h3>
+                    <p class="pending">5</p>
+                </div>
+                <div class="card">
+                    <h3>Resolved</h3>
+                    <p class="resolved">7</p>
+                </div>
+            </section>
+
+            <!-- Recent Grievances -->
+            <section class="recent">
+                <h2>Recent Grievances</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>#101</td>
+                            <td>Hostel Water Issue</td>
+                            <td>Hostel</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>17 Feb 2026</td>
+                        </tr>
+                        <tr>
+                            <td>#102</td>
+                            <td>Exam Schedule Conflict</td>
+                            <td>Academic</td>
+                            <td><span class="status resolved">Resolved</span></td>
+                            <td>14 Feb 2026</td>
+                        </tr>
+                        <tr>
+                            <td>#103</td>
+                            <td>Library Timing</td>
+                            <td>Library</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>10 Feb 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

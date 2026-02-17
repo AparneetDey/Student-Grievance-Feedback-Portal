@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Grievance</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/submit-grievance.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">Grievance Portal</h2>
+        <nav class="sidebar-nav">
+            <a href="studentDashboard.html">Dashboard</a>
+            <a href="submitGrievance.html" class="active">Submit Grievance</a>
+            <a href="grievanceStatus.html">Grievance Status</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="profile.html">Profile</a>
+            <a href="#">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-header">
+            <h1>Submit Grievance</h1>
+        </header>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <form id="grievanceForm">
+                <!-- Category -->
+                <div class="form-group">
+                    <label>Category</label>
+                    <select required>
+                        <option value="">Select Category</option>
+                        <option>Academic</option>
+                        <option>Hostel</option>
+                        <option>Library</option>
+                        <option>Faculty</option>
+                        <option>Infrastructure</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <!-- Title -->
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" placeholder="Enter grievance title" required>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea rows="5" placeholder="Explain your grievance..." required></textarea>
+                </div>
+
+                <!-- File Upload -->
+                <div class="form-group">
+                    <label>Attachment (optional)</label>
+                    <input type="file">
+                </div>
+
+                <!-- Anonymous Option -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="anonymous">
+                    <label for="anonymous">Submit anonymously</label>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="btn primary-btn">
+                        Submit Grievance
+                    </button>
+
+                    <button type="button" class="btn secondary-btn"
+                        onclick="window.location.href='studentDashboard.html'">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</div>
+
+<script>
+
+document.getElementById("grievanceForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Grievance submitted successfully!");
+
+    window.location.href = "studentDashboard.html";
+
+});
+
+</script>
+
+</body>
+</html>
