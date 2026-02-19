@@ -2,21 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
+
+    <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/profile.css">
 </head>
-
 <body>
 
-<body>
-    <div class="profile-card">
-        <img src="https://via.placeholder.com/150" class="profile-img" alt="image" />
+<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
 
-        <h2>John Deo</h2>
-        <p>Email: john@email.com</p>
-        <p>Role: Student</p>
+        <h2 class="logo">Grievance Portal</h2>
 
-    </div>
+        <nav class="sidebar-nav">
+            <a href="studentDashboard.html">Dashboard</a>
+            <a href="submitGrievance.html">Submit Grievance</a>
+            <a href="grievanceStatus.html">Grievance Status</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="profilePage.html" class="active">Profile</a>
+            <a href="adminHelp.html">Help & Contact</a>
+            <a href="admindash.html">Admin Dashboard</a>
+            <a href="#">Logout</a>
+        </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>My Profile</h1>
+
+        <!-- Profile Info -->
+        <section class="profile-section">
+            <img src="../../public/profile.jpg"
+                 class="profile-img"
+                 alt="profile">
+            <div class="profile-info">
+                <h2>John Doe</h2>
+                <p><strong>Email:</strong> john@email.com</p>
+                <p><strong>Roll No:</strong> CSE2021001</p>
+                <p><strong>Department:</strong> Computer Science</p>
+                <p><strong>Role:</strong> Student</p>
+                <button class="btn primary-btn">
+                    Edit Profile
+                </button>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <h3>Total</h3>
+                <p class="total">12</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p class="pending">5</p>
+            </div>
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p class="resolved">7</p>
+            </div>
+        </section>
+
+        <!-- User Grievances -->
+        <section class="grievance-section">
+            <h2>My Grievances</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#101</td>
+                        <td>Hostel Water Issue</td>
+                        <td>Hostel</td>
+                        <td>
+                            <span class="status pending">
+                                Pending
+                            </span>
+                        </td>
+                        <td>17 Feb 2026</td>
+                    </tr>
+                    <tr>
+                        <td>#102</td>
+                        <td>Exam Schedule Conflict</td>
+                        <td>Academic</td>
+                        <td>
+                            <span class="status resolved">
+                                Resolved
+                            </span>
+                        </td>
+                        <td>14 Feb 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
 </body>
 </html>
