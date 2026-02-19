@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./src/CSS/index.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Admin Dashboard</h1>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="adminhelp.html">Help</a>
+            <a href="#">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<section class="container" style="margin-top:50px;">
+    <h2>Dashboard Overview</h2>
+
+    <div class="feature-grid" style="margin-top:30px;">
+        <div class="feature-card">
+            <h3>Total Grievances</h3>
+            <p>120</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Pending</h3>
+            <p>35</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Resolved</h3>
+            <p>70</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>In Progress</h3>
+            <p>15</p>
+        </div>
+    </div>
+
+    <div class="feature-card" style="margin-top:40px;">
+        <h3>Recent Grievances</h3>
+
+        <table style="width:100%; margin-top:20px; border-collapse: collapse;">
+            <tr>
+                <th style="border-bottom:1px solid #ccc; padding:10px;">Student</th>
+                <th style="border-bottom:1px solid #ccc; padding:10px;">Department</th>
+                <th style="border-bottom:1px solid #ccc; padding:10px;">Status</th>
+                <th style="border-bottom:1px solid #ccc; padding:10px;">Action</th>
+            </tr>
+
+            <tr>
+                <td style="padding:10px;">John Doe</td>
+                <td style="padding:10px;">CSE</td>
+                <td style="padding:10px;">Pending</td>
+                <td style="padding:10px;">
+                    <button class="btn primary-btn">Resolve</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding:10px;">Jane Smith</td>
+                <td style="padding:10px;">ECE</td>
+                <td style="padding:10px;">In Progress</td>
+                <td style="padding:10px;">
+                    <button class="btn primary-btn">Update</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+
+<footer class="footer" style="margin-top:50px;">
+    <div class="container footer-container">
+        <p>© 2026 Grievance Portal</p>
+    </div>
+</footer>
+
+</body>
+</html>
