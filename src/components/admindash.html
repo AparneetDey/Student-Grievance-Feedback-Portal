@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/admin-dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">Admin Panel</h2>
+        <nav class="sidebar-nav">
+            <a href="studentDashboard.html">Dashboard</a>
+            <a href="submitGrievance.html">Submit Grievance</a>
+            <a href="grievanceStatus.html">Grievance Status</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="profile.html">Profile</a>
+            <a href="adminHelp.html">Help & Contact</a>
+            <a href="admindash.html" class="active">Admin Dashboard</a>
+            <a href="#">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>Dashboard Overview</h1>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Grievances</h3>
+                <p>120</p>
+            </div>
+            <div class="stat-card pending">
+                <h3>Pending</h3>
+                <p>35</p>
+            </div>
+            <div class="stat-card progress">
+                <h3>In Progress</h3>
+                <p>15</p>
+            </div>
+            <div class="stat-card resolved">
+                <h3>Resolved</h3>
+                <p>70</p>
+            </div>
+        </section>
+
+        <!-- Recent Grievances -->
+        <section class="card">
+            <h2>Recent Grievances</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Department</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>CSE</td>
+                        <td>Hostel Water Issue</td>
+                        <td>
+                            <span class="status pending">
+                                Pending
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn resolve-btn">
+                                Resolve
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>ECE</td>
+                        <td>Exam Conflict</td>
+                        <td>
+                            <span class="status progress">
+                                In Progress
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn update-btn">
+                                Update
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

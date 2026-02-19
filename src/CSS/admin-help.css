@@ -1,0 +1,132 @@
+/* Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: var(--color-bg-main);
+}
+
+
+/* Sidebar */
+.sidebar {
+
+    width: 240px;
+    background: var(--color-bg-sidebar);
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav a {
+
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.sidebar-nav a:hover {
+    background: var(--color-bg-hover);
+}
+
+.sidebar-nav .active {
+    background: var(--color-primary);
+}
+
+
+/* Main */
+.main-content {
+
+    flex: 1;
+    padding: 30px;
+}
+
+
+/* Cards */
+.card {
+
+    background: var(--color-bg-card);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+
+/* Contact info */
+.contact-grid {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+
+    color: var(--color-text-secondary);
+}
+
+
+/* Form */
+.form-group {
+
+    margin-bottom: 15px;
+}
+
+input, textarea {
+
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+}
+
+
+/* Button */
+.btn {
+
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary-btn {
+
+    background: var(--color-primary);
+    color: white;
+}
+
+.primary-btn:hover {
+
+    background: var(--color-primary-dark);
+}
+
+
+/* Success */
+.success-message {
+
+    display: none;
+    color: var(--color-success);
+    margin-top: 10px;
+}
