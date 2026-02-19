@@ -10,3 +10,36 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
+:root {
+    /* Primary colors */
+    --color-primary: #2563eb;
+    --color-primary-dark: #1e40af;
+    --color-primary-light: #e0e7ff;
+
+    /* Status colors */
+    --color-success: #16a34a;
+    --color-warning: #f59e0b;
+    --color-danger: #dc2626;
+    --color-info: #0284c7;
+
+    /* Background colors */
+    --color-bg-main: #f4f7fb;
+    --color-bg-card: #ffffff;
+    --color-bg-sidebar: #1e293b;
+    --color-bg-hover: #334155;
+
+    /* Text colors */
+    --color-text-main: #111827;
+    --color-text-secondary: #6b7280;
+    --color-text-white: #ffffff;
+
+    /* Border colors */
+    --color-border: #e5e7eb;
+    --color-border-light: #f1f5f9;
+
+    /* Button colors */
+    --color-btn-secondary: #e5e7eb;
+    --color-btn-secondary-hover: #d1d5db;
+
+}
