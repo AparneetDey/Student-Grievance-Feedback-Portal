@@ -26,24 +26,28 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     
     try {
-      // Simulate API call with dummy data
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      // Find user by email
-      const foundUser = Object.values(dummyUsers).find(u => u.email === email);
-      
-      if (!foundUser) {
-        throw new Error('User not found');
+      const response = await fetch('http://localhost:8080/api/student/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Login failed');
       }
-      
-      // In a real app, verify password
-      if (password !== 'password123') {
-        throw new Error('Invalid password');
-      }
-      
+
+      // data contains the user object returned by the backend
       const userData = {
-        ...foundUser,
-        // Don't store password in localStorage
+        id: data.uid,
+        email: data.email,
+        name: data.name,
+        role: data.role || 'student',
+        studentId: data.studentId,
+        department: data.department,
+        createdAt: data.createdAt,
+        updatedAt: data.updatedAt
       };
       
       localStorage.setItem('currentUser', JSON.stringify(userData));
@@ -62,25 +66,34 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      // Check if email already exists
-      const exists = Object.values(dummyUsers).some(u => u.email === formData.email);
-      if (exists) {
-        throw new Error('Email already registered');
+      const response = await fetch('http://localhost:8080/api/student/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+          studentId: formData.studentId,
+          department: formData.department,
+          role: 'student'
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Signup failed');
       }
       
       const newUser = {
-        id: String(Object.keys(dummyUsers).length + 1),
-        email: formData.email,
-        name: formData.name,
-        password: formData.password,
-        role: 'student',
-        studentId: formData.studentId || '',
-        department: formData.department || '',
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        id: data.uid,
+        email: data.email,
+        name: data.name,
+        role: data.role || 'student',
+        studentId: data.studentId,
+        department: data.department,
+        createdAt: data.createdAt,
+        updatedAt: data.updatedAt
       };
       
       localStorage.setItem('currentUser', JSON.stringify(newUser));
