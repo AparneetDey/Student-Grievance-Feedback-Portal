@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GRIEVANCE_CATEGORIES } from '../lib/data';
+import { GRIEVANCE_CATEGORIES, dummyGrievances } from '../lib/data';
 import { ArrowLeft } from 'lucide-react';
+import { useAuth } from '../lib/AuthContext';
 
 export default function NewGrievancePage() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -22,7 +24,24 @@ export default function NewGrievancePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app, this would submit to the backend
+    
+    // Create new grievance and add it to the dummy data
+    const newGrievance = {
+      id: String(Date.now()), // Generate unique ID
+      anonymous: formData.anonymous,
+      category: formData.category,
+      title: formData.title,
+      description: formData.description,
+      status: 'open',
+      priority: 'medium',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      userId: user?.id,
+    };
+    
+    // Add to the front of the array
+    dummyGrievances.unshift(newGrievance);
+
     navigate('/grievances');
   };
 

@@ -12,7 +12,7 @@ export default function GrievancesPage() {
 
   if (!user) return null;
 
-  const userGrievances = dummyGrievances.filter(g => g.userId === user.id);
+  const userGrievances = dummyGrievances.filter(g => g.userId == user.id);
 
   const filtered = userGrievances.filter(g => {
     const matchesSearch = g.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
